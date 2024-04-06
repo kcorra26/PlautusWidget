@@ -3,9 +3,9 @@ import {Helmet} from 'react-helmet';
 import {Route, Routes} from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.css'; 
 import './App.css';
-import About from "./About"
-import Nav from "./Nav"
-import Home from "./Home"
+import About from "./mycomponents/About"
+import Nav from "./mycomponents/Nav"
+import Home from "./mycomponents/Home"
 
 function App() {
 

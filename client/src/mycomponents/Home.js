@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.css'; 
-import './App.css';
+import '../App.css';
 import axios from 'axios'
 
 
@@ -74,7 +74,7 @@ export default function Home() {
                         <button className='btn btn-success'>Convert</button>
                     </div>
                 </form>
-                <div className='mb-5 lead col-sm-6'>
+                <div className='mb-5 lead col-sm-8'>
                     {lineNum && <div>Line Number: {JSON.stringify(lineNum)}</div>}
                 </div>
             </div>

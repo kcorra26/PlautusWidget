@@ -18,7 +18,7 @@ export default function About() {
                 Full project with XML integration can be found on Github. 
             </p>
 
-            <a href="https://github.com/helmadik/LewisShortLogeion">
+            <a href="https://github.com/kcorra26/LewisShortLogeion">
                 <h3><i class="bi bi-github" style={{ fontSize: '35px' }}></i></h3>
             </a>
 
