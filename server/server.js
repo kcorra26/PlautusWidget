@@ -1,7 +1,12 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
+const path = require('path');
 
+app.use(express.static(path.join(__dirname, '../client/build')));
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname+'../client/build/index.html'));
+  });
 app.use(express.json());
 app.use(cors());
 app.use(express.json());
@@ -17,6 +22,8 @@ app.post('/login', (req, res) => {
     return res.json(convert_combo(act, scene, line, play));
 })
 
-app.listen(8000, () => {
-    console.log(`Server is running on port 8000.`);
+const PORT = process.env.PORT || 8000;
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}.`);
   });

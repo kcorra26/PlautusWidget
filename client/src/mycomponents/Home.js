@@ -12,6 +12,8 @@ export default function Home() {
     const [lineNum, setLineNum] = useState(null)
     const [isOpen, setIsOpen] = useState(false)
 
+    const baseUrl = process.env.REACT_APP_API_URL || "http://localhost:8000";
+
     const plays = [
         {value:"Amphitryon", text:"Amphitryon"}, {value:"Asinaria", text:"Asinaria"}, 
         {value:"Aulularia", text:"Aulularia"}, {value:"Bacchides", text:"Bacchides"}, 
@@ -27,7 +29,7 @@ export default function Home() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        axios.post('http://localhost:8000/login', {act, scene, line, play})
+        axios.post(`${baseUrl}/login`, {act, scene, line, play})
         .then(res => setLineNum(res.data))
         .catch(err => console.log(err))
     }
