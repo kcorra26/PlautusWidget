@@ -29,7 +29,7 @@ export default function Home() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        axios.post(`${baseUrl}/login`, {act, scene, line, play})
+        axios.post(`/login`, {act, scene, line, play})
         .then(res => setLineNum(res.data))
         .catch(err => console.log(err))
     }
