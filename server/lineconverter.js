@@ -26,7 +26,7 @@ function convert_combo(act, scene, line, play) {
             return `sorry, we don't have a play with that name ${play}`;
     }
     if (result === 0){
-        return `This Act/Scene/Line combo does not exist`;
+        return "Combo does not exist";
     } else {
         return result;
     }

@@ -39,8 +39,9 @@ export default function Home() {
     return (
         <div className="m-5 d-flex vh-100 justify-content-center align-items-start">
             <div className= 'p-4 w-25'>
-                <h3 className="mb-5 text-center">Enter Your Citation</h3>
-                <form className="row gy-2 gx-3" onSubmit={handleSubmit}>
+                <h3 className="mb-3 text-center">Enter Your Citation</h3>
+                <small className="text-body-secondary">Convert your Plautus line references here. </small>
+                <form className="mt-4 row gy-2 gx-3" onSubmit={handleSubmit}>
                     <div className='mb-3 row'>
                         <label htmlFor="act" className="col-sm-2 col-form-label">Act</label>
                         <input placeholder='Enter Act Number' className='form-control'
@@ -75,7 +76,7 @@ export default function Home() {
                     </div>
                 </form>
                 <div className='mb-5 lead col-sm-8'>
-                    {lineNum && <div>Line Number: {JSON.stringify(lineNum)}</div>}
+                    {lineNum && <div>Line Number: {lineNum}</div>}
                 </div>
             </div>
         </div>
